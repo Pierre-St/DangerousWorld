@@ -63,7 +63,9 @@ namespace PierreStirnweiss.DangerousWorld
 
                 if (layer == null)
                 {
+#if DEBUG
                     PUtil.LogDebug("Null layer");
+#endif
                     layer = PositionMonitor.Instance.AddLayer("DW_Hatches");
                 }
                 Debug.Assert(layer != null, "Hatch layer is null");
@@ -85,7 +87,9 @@ namespace PierreStirnweiss.DangerousWorld
 
                 if (layer == null)
                 {
+#if DEBUG
                     PUtil.LogDebug("Null layer");
+#endif
                     layer = PositionMonitor.Instance.AddLayer("DW_Minions");
                 }
                 Debug.Assert(layer != null, "Minion layer is null");

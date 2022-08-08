@@ -34,13 +34,10 @@ namespace PierreStirnweiss.DangerousWorld {
 */
         public override void OnLoad(Harmony harmony)
         {
-            PUtil.LogDebug("OnLoad begin");
             base.OnLoad(harmony);
 
-            PUtil.LogDebug("OnLoad base loaded");
-
-            PUtil.InitLibrary();
-            ///new PBuildingManager().Register(DangerousWorldProstheticsFabricatorConfig.CreateBuilding());
+            PUtil.InitLibrary(true);
+            //new PBuildingManager().Register(DangerousWorldProstheticsFabricatorConfig.CreateBuilding());
 
             PUtil.LogDebug("OnLoad PLib initialised");
 

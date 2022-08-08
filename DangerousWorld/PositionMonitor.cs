@@ -43,7 +43,9 @@ namespace PierreStirnweiss.DangerousWorld
         {
             if (m_layers.Count >= 64)
             {
+#if DEBUG
                 PUtil.LogDebug("Maximum number of layers reached. Returning the default layer");
+#endif
                 return m_layers[0];
             }
 

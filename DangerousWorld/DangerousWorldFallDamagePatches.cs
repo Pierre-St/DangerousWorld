@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace PierreStirnweiss.DangerousWorld
 {
-    class DangerousWorldFallDamagePatches : KMod.UserMod2
+    class DangerousWorldFallDamagePatches
     {
         private static IDictionary<GameObject, int> dupesDict = new Dictionary<GameObject, int>(64);
 
@@ -84,7 +84,7 @@ namespace PierreStirnweiss.DangerousWorld
                     if (!dupesDict.ContainsKey(__instance.gameObject))
                     {
 #if DEBUG
-                        PUtil.LogError("Unknown dupe tryEntombedEscape");
+                        //PUtil.LogError("Unknown dupe tryEntombedEscape");
 #endif
                         dupesDict.Add(__instance.gameObject, -1);
                     }
